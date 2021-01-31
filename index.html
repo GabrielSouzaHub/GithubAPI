@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>User Search</title>
+</head>
+<body>
+    <div class="navigation">
+        <div class="">
+        <label for="user">User</label>
+        <input type="text" id="searchUser" required autofocus/>
+        </div>
+        <div>
+        <button id="searchUserButton">Search</button>
+        </div>
+    </div>
+    <div id="user-info">
+        <div id="user-name-img">
+        <img id="user-img">
+        <p id="user-name"></p>
+        <p id="user-login"></p>
+            <div class="navigation-user">
+            <p id="user-urlP" class="invisible"><a id="user-url">Link to Profile</a></p>
+            <p id="userRepo-urlP" class="invisible"><a id="userRepo-url">Link to Repository</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/models/UserModel.js"></script>
+    <script src="./js/controllers/UserController.js"></script>
+    <script src="./js/views/UserView.js"></script>
+</body>
+</html>
