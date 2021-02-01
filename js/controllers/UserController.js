@@ -1,7 +1,11 @@
 class UserController {
     searchUser(user) {
         let userModel = new UserModel();
-        userModel.searchInfoUser(user, () => new UserView(userModel._userName,userModel._userLogin,userModel._userAvatar,userModel._userUrl,userModel._reposUrl))
+        userModel.searchInfoUser(user, () => new UserView(userModel.userName,userModel.userLogin,userModel.userAvatar,userModel.userUrl,userModel.reposUrl));
+    }
+    searchRepo(user) {
+        let reposModel = new ReposModel();
+        reposModel.searchInfoRepo(user, () => new ReposView(reposModel._repoListName,reposModel._repoListLang,reposModel._repoListUrl));
     }
 }
 
@@ -10,4 +14,5 @@ button.addEventListener("click", () => {
     let user = document.querySelector('#searchUser').value;
     let userController = new UserController();
     userController.searchUser(user);
+    userController.searchRepo(user);
 });
